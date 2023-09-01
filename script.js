@@ -36,7 +36,11 @@ async function checkWeather(city) {
     weatherIcon.src = "images/snow.png";
   } else if (data.weather[0].main === "Wind") {
     weatherIcon.src = "images/wind.png";
+  } else if (data.weather[0].main === "Haze") {
+    weatherIcon.src = "images/rain.png";
   }
+
+  document.querySelector(".weather").style.display = "block";
 }
 
 searchBtn.addEventListener("click", () => {
